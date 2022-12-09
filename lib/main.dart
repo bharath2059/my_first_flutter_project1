@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_project/greetingPage.dart';
 import 'package:my_first_flutter_project/weatherPage.dart';
+import 'package:my_first_flutter_project/calc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,16 +12,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-        initialRoute: '/',
-      routes: {
-          '/':(context)=>GreetingPage(),
-        '/weather':(context)=>Weather(),
-      }
-
-
-    );
-
+    return MaterialApp(initialRoute: '/', routes: {
+      '/': (context) => GreetingPage(),
+      '/weather': (context) => Weather(),
+      '/calc': (context) => SimpleCalc(),
+    });
   }
 }
 
